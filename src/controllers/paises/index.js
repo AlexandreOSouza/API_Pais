@@ -8,8 +8,8 @@ module.exports = {
                     var rawText = data.toString('utf8');
                     const jsonArray = rawText.split('\n').map(line => {
                         const json = {
-                            cod: line.substr(0, 4),
-                            name: line.substr(5)
+                            cod: line.substr(0, 4).trim(),
+                            name: line.substr(5).trim()
                         }
                         return json;
                     })
